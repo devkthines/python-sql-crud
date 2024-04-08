@@ -1,4 +1,4 @@
-﻿# main.py
+﻿# advanced_user_operations.py
 
 from models.user import User
 from database.connection import create_connection
@@ -34,10 +34,3 @@ def delete_users_by_criteria(criteria):
         cursor.execute(query)
         conn.commit()
         conn.close()
-
-if __name__ == "__main__":
-    create_user_with_profile("john_doe", "john@example.com", 30, "male", "123 Street, City")
-    users = retrieve_users_by_criteria("age > 25")
-    print(users)
-    update_user_profile(1, age=35)
-    delete_users_by_criteria("age < 30")

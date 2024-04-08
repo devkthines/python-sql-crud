@@ -1,13 +1,9 @@
-﻿# tests/test_user_operations.py
-
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+﻿# test_advanced_user_operations.py
 
 import unittest
-from main import create_user_with_profile, retrieve_users_by_criteria, update_user_profile, delete_users_by_criteria
+from advanced_user_operations import create_user_with_profile, retrieve_users_by_criteria, update_user_profile, delete_users_by_criteria
 
-class TestUserOperations(unittest.TestCase):
+class TestAdvancedUserOperations(unittest.TestCase):
     def test_create_user(self):
         create_user_with_profile("test_user", "test@example.com", 25, "male", "Test Address")
         users = retrieve_users_by_criteria("username = 'test_user'")
